@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# Create a virtual environment
+python3.9 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
 # Build the project
 echo "Building the project..."
-python3.9 -m pip install -r requirements.txt
+pip install -r requirements.txt
 
 echo "Make Migration..."
 python3.9 manage.py makemigrations --noinput
